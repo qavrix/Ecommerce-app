@@ -1,9 +1,3 @@
-
-# Checkout my other project
-
-*[Join the Talkhouse Family😊](https://github.com/saalikmubeen/talkhouse) | WebRTC based peer to peer voice, video calling and messaging web app build with MERN stack*
-
-
 # microservices-architectured-app
 An event-driven asynchronous communication based microservices architectured e-commerce app created using express, typescript, nats-streaming and next.js
 
