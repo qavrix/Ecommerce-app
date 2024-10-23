@@ -1,15 +1,3 @@
-# microservices-architectured-app
-An event-driven asynchronous communication based microservices architectured e-commerce app created using express, typescript, nats-streaming and next.js
-
-# What is this ?
-
-It's an e-commerce based web app for buying and selling tickets of different live and fun events happening around the city based on microservices architecture. The app is broken down into multiple individual services that talk to each other through publishing events via an event bus. Each service is responsible for handling and implementing a specific feature of the app like auth service handles authentication, orders service handles orders, payments service implements user payments and all these services work and communicate asynchronously through an event bus(nats-streaming) to run the entire app
-
-# Why microservices ?
-
-Using microservices architecture and not relying on the monoloith pattern makes the app more durable, fault tolerant, highly available and increases the up time of the app. So if one of the services crashes, other parts of the app will still be functional and available to the users. Microservices and distributed systems is the heart of modern software and backend engineering.
-
-
 # Technologies used
 
 - **`Next.js`** for server side rendering and building frontend
@@ -40,12 +28,6 @@ The app is divided into 7 services that handle and implement a specific feature 
             This service is published as an npm package and installed in other services to be used. 
 - `client` handles and implements the frontend of the app.
 - `infra`  manages all the kubernetes deployment and service (.yaml) files that run run the app
-
-
-# Kubernetes and Docker Architecture
-
-Each service, mogongodb database and nats-streaming server is dockerized as a docker container. The docker conatiners are managed and orchestrated by their respective kubernetes deployment.yaml files inside the infra directory. The communication between different kuberentes deployments is governed by service ObjectType.
-Finally ingress-service, which uses ingress-nginx (an Ingress controller for Kubernetes using NGINX) as a reverse proxy and a load balancer to proxy or direct incoming requests to their respective services under the `ticketing.dev` hostname. Skaffold is used to get all the kubernetes deployments and services up and running with a single command  `skaffold dev` which uses skaffold.yaml file. 
 
 #  Installation 
 
